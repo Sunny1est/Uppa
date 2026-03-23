@@ -3,8 +3,8 @@
   <p><strong>Seu Mascote de Produtividade Gamificada</strong></p>
 
   <p>
-    <a href="https://github.com/david/Uppa/actions/workflows/build.yml"><img src="https://github.com/david/Uppa/actions/workflows/build.yml/badge.svg" alt="Build Status"></a>
-    <a href="https://github.com/david/Uppa/actions/workflows/pytest.yml"><img src="https://github.com/david/Uppa/actions/workflows/pytest.yml/badge.svg" alt="Tests Status"></a>
+    <a href="https://github.com/Sunny1est/Uppa/actions/workflows/build.yml"><img src="https://github.com/Sunny1est/Uppa/actions/workflows/build.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/Sunny1est/Uppa/actions/workflows/pytest.yml"><img src="https://github.com/Sunny1est/Uppa/actions/workflows/pytest.yml/badge.svg" alt="Tests Status"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
     <img src="https://img.shields.io/badge/python-3.10+-yellow.svg" alt="Python Version">
   </p>
