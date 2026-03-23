@@ -68,30 +68,30 @@ WINDOW_MIN_HEIGHT = 600
 DEFAULT_THEME = "dark"  # "dark" ou "light"
 COLOR_THEME = "blue"
 
-# Tema Refinado (Neo-Tech / Anti-cliché)
+# Tema (Neo-Black com Roxo e Amarelo)
 THEME = {
-    "bg_main": "#0A0A0A",      # Black absoluto / Fundo base
-    "bg_card": "#171717",      # Cinza escuro / Cartões
-    "text_main": "#F3F4F6",    # Branco gelo / Textos
-    "text_sec": "#9CA3AF",     # Cinza médio / Secundário
-    "border": "#262626",       # Bordas industriais
-    "success": "#10B981",      # Verde esmeralda
-    "warning": "#F59E0B",      # Amarelo alerta
-    "danger": "#EF4444",       # Vermelho puro
-    "primary": "#FF5A1F",      # Laranja Sinal (Signal Orange) - Anti Cliché
-    "primary_hover": "#E04F1A",
-    "secondary": "#262626",    # Cinza desativado
+    "bg_main": "#0D0D0D",      # Preto profundo / Fundo base
+    "bg_card": "#1A1A1A",      # Cinza super escuro / Cartões
+    "text_main": "#FDFBFF",    # Branco perolado / Textos
+    "text_sec": "#A3A3A3",     # Cinza médio / Secundário
+    "border": "#361D59",       # Bordas roxas escuras
+    "success": "#00E676",      # Verde vivo
+    "warning": "#FFEA00",      # Amarelo alerta
+    "danger": "#FF1744",       # Vermelho vivo
+    "primary": "#8A2BE2",      # Azul Violeta (Roxo vibrante)
+    "primary_hover": "#6A1B9A",# Roxo escuro no hover
+    "secondary": "#261635",    # Roxo desativado/fundo
     "bg_container": "#121212"
 }
 
 # Cores fixas e Acentos
 COLORS = {
-    "accent": "#FF5A1F",      # Laranja Sinal
-    "accent_hover": "#E04F1A",
-    "gold": "#FCD34D",        
-    "mana": "#38BDF8",        # Azul Técnico para Mana
-    "xp": "#FF5A1F",          
-    "health": "#EF4444"
+    "accent": "#FFC857",      # Amarelo Ouro
+    "accent_hover": "#FFD54F",
+    "gold": "#FFC857",        
+    "mana": "#00E5FF",        # Ciano para Mana
+    "xp": "#FFC857",          # XP Amarelo
+    "health": "#FF1744"
 }
 
 # =============================================================================

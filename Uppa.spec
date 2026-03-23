@@ -1,69 +1,39 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-block_cipher = None
-
-import os
-import sys
-
-# Caminho absoluto para a pasta src
-src_path = os.path.abspath('src')
 
 a = Analysis(
-    [os.path.join(src_path, 'main.py')],
-    pathex=[src_path],
+    ['src\\main.py'],
+    pathex=[],
     binaries=[],
-    datas=[
-        (os.path.join(src_path, 'assets'), 'assets'), 
-        (os.path.join(src_path, 'uppa_data.db'), '.') # Incluir banco inicial se existir
-    ],
-    hiddenimports=[
-        'win11toast', 
-        'winsound', 
-        'PIL', 
-        'customtkinter', 
-        'matplotlib',
-        'numpy',
-        'pygame',
-        'sqlite3',
-        'logging.handlers'
-    ],
+    datas=[('src/assets', 'assets')],
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
-    win_no_prefer_redirects=False,
-    win_private_assemblies=False,
-    cipher=block_cipher,
     noarchive=False,
+    optimize=0,
 )
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+pyz = PYZ(a.pure)
 
 exe = EXE(
     pyz,
     a.scripts,
+    a.binaries,
+    a.datas,
     [],
-    exclude_binaries=True,
     name='Uppa',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    console=False, # False para não mostrar terminal ("Windowed Mode")
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=os.path.join(src_path, 'assets', 'icon.ico'),
-)
-
-coll = COLLECT(
-    exe,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
-    strip=False,
-    upx=True,
-    upx_exclude=[],
-    name='Uppa',
+    icon=['src\\assets\\icon.ico'],
 )

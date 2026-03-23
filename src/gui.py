@@ -113,7 +113,7 @@ class CTkToolTip:
             # Container com borda
             frame = ctk.CTkFrame(
                 self.tooltip,
-                fg_color="#9d4edd", # Borda
+                fg_color="#6A1B9A", # Borda
                 corner_radius=6
             )
             frame.pack(fill="both", expand=True)
@@ -316,7 +316,7 @@ class UppaApp(ctk.CTk):
         # Barra XP - ANIMADA
         self.progress_xp = AnimatedProgressBar(
             inner,
-            fg_color="#1a0436",
+            fg_color="#121212",
             progress_color=THEME["primary"],
             height=12,
             corner_radius=6
@@ -341,7 +341,7 @@ class UppaApp(ctk.CTk):
         self.label_mana.pack(pady=(5, 0))
         
         # Separador
-        sep = ctk.CTkFrame(inner, height=1, fg_color="#2a2f4a")
+        sep = ctk.CTkFrame(inner, height=1, fg_color="#361D59")
         sep.pack(fill="x", pady=5) # Reduced padding
         
         # INVENTÁRIO COMPACTO
@@ -353,7 +353,7 @@ class UppaApp(ctk.CTk):
         
         self.inventario_hud_frame = ctk.CTkFrame(
             inner,
-            fg_color="#1a0436",
+            fg_color="#121212",
             corner_radius=6,
             height=35
         )
@@ -363,7 +363,7 @@ class UppaApp(ctk.CTk):
         self.atualizar_inventario_hud()
         
         # Separador
-        sep2 = ctk.CTkFrame(inner, height=1, fg_color="#2a2f4a")
+        sep2 = ctk.CTkFrame(inner, height=1, fg_color="#361D59")
         sep2.pack(fill="x", pady=5) # Reduced padding
         
         # STATS RPG com Radar Chart
@@ -395,7 +395,7 @@ class UppaApp(ctk.CTk):
         self.label_classe = ctk.CTkLabel(
             inner, text="Iniciante",
             font=("Roboto", 11, "bold"),
-            text_color="#ffd60a"
+            text_color="#FFC857"
         )
         self.label_classe.pack(pady=(5, 0))
         
@@ -441,7 +441,7 @@ class UppaApp(ctk.CTk):
             ).pack(side="left", padx=(0, 0))
             
         # Separador final
-        ctk.CTkFrame(inner, height=1, fg_color="#2a2f4a").pack(fill="x", pady=10)
+        ctk.CTkFrame(inner, height=1, fg_color="#361D59").pack(fill="x", pady=10)
         
         # --- CONTROLE DE VOLUME ---
         vol_frame = ctk.CTkFrame(inner, fg_color="transparent")
@@ -467,8 +467,8 @@ class UppaApp(ctk.CTk):
                 number_of_steps=20,
                 height=15,
                 progress_color="#7209b7",
-                button_color="#b44fff",
-                button_hover_color="#e0aaff",
+                button_color="#8A2BE2",
+                button_hover_color="#6A1B9A",
                 command=self.mudar_volume
             )
             self.vol_slider.set(0.5) # Default
@@ -489,7 +489,7 @@ class UppaApp(ctk.CTk):
         # Botão Conquistas
         self.btn_conquistas = ctk.CTkButton(
             inner, text="🏆 Mural de Conquistas",
-            fg_color="#ffd60a", text_color="#1a0436", hover_color="#facc15",
+            fg_color="#FFC857", text_color="#121212", hover_color="#FFD54F",
             font=("Roboto", 11, "bold"),
             command=self.abrir_mural_conquistas
         )
@@ -501,7 +501,7 @@ class UppaApp(ctk.CTk):
         ctk.CTkLabel(
             inner, text="🎯 Desafios do Dia",
             font=("Roboto", 11, "bold"),
-            text_color="#ffd60a"
+            text_color="#FFC857"
         ).pack(anchor="w")
         
         # Frame para desafios
@@ -516,13 +516,13 @@ class UppaApp(ctk.CTk):
         win = ctk.CTkToplevel(self)
         win.title("Mural de Conquistas")
         win.geometry("500x400")
-        win.configure(fg_color="#0f111a")
+        win.configure(fg_color="#0D0D0D")
         win.attributes('-topmost', True)
         win.grab_set()
 
         ctk.CTkLabel(
             win, text="🏆 Suas Conquistas",
-            font=("Roboto", 20, "bold"), text_color="#ffd60a"
+            font=("Roboto", 20, "bold"), text_color="#FFC857"
         ).pack(pady=10)
 
         scroll = ctk.CTkScrollableFrame(win, fg_color="transparent")
@@ -546,7 +546,7 @@ class UppaApp(ctk.CTk):
             return
 
         for name, desc, data in achievements:
-            card = ctk.CTkFrame(scroll, fg_color="#1a1f3a", corner_radius=8)
+            card = ctk.CTkFrame(scroll, fg_color="#1A1A1A", corner_radius=8)
             card.pack(fill="x", pady=5)
             
             ctk.CTkLabel(
@@ -596,8 +596,8 @@ class UppaApp(ctk.CTk):
             header,
             text="📊",
             font=("Segoe UI Emoji", 16),
-            fg_color="#2a1050",
-            hover_color="#3c096c",
+            fg_color="#261635",
+            hover_color="#261635",
             height=35,
             width=45,
             corner_radius=18,
@@ -611,10 +611,10 @@ class UppaApp(ctk.CTk):
             values=["Ativas", "Histórico"],
             variable=self.filter_var,
             command=self.mudar_filtro_tarefas,
-            selected_color="#9d4edd",
+            selected_color="#6A1B9A",
             selected_hover_color="#c77dff",
             unselected_color="#240046",
-            unselected_hover_color="#3c096c",
+            unselected_hover_color="#261635",
             text_color="#e0e0e0"
         )
         self.filter_button.pack(fill="x", pady=(0, 10))
@@ -743,7 +743,7 @@ class UppaApp(ctk.CTk):
         ctk.CTkButton(
             header, text="Loja 🪙",
             font=("Roboto", 11, "bold"),
-            text_color="#1a0436", fg_color="#ffd60a", hover_color="#facc15",
+            text_color="#121212", fg_color="#FFC857", hover_color="#FFD54F",
             width=60, height=28,
             command=self.toggle_shop_view
         ).pack(side="right")
@@ -1118,7 +1118,7 @@ class UppaApp(ctk.CTk):
                         font=("Roboto", 10, "bold"),
                         width=50,  # Reduzido de 70 para 50
                         height=24,  # Mantido pequeno
-                        fg_color="#3c096c",
+                        fg_color="#261635",
                         hover_color="#7209b7",
                         command=lambda code=item_code: self.usar_item(code)
                     )
@@ -1189,7 +1189,7 @@ class UppaApp(ctk.CTk):
                     status_color = "#51cf66"
                 elif is_completed:
                     status_text = "✅"  # Completado, aguardando coleta
-                    status_color = "#ffd60a"
+                    status_color = "#FFC857"
                 else:
                     status_text = "⬜"  # Pendente
                     status_color = "#666"
@@ -1201,7 +1201,7 @@ class UppaApp(ctk.CTk):
                 ).pack(side="left")
                 
                 # Nome do desafio (compacto)
-                name_color = "#aaa" if not is_completed else ("#51cf66" if claimed else "#ffd60a")
+                name_color = "#aaa" if not is_completed else ("#51cf66" if claimed else "#FFC857")
                 nome_label = ctk.CTkLabel(
                     row, text=challenge.get('name', '?'),
                     font=("Roboto", 9),
@@ -1230,7 +1230,7 @@ class UppaApp(ctk.CTk):
                     ctk.CTkButton(
                         row, text="🎁",
                         width=25, height=20,
-                        fg_color="#ffd60a",
+                        fg_color="#FFC857",
                         hover_color="#fab005",
                         text_color="#000",
                         font=("Roboto", 10),
@@ -1516,7 +1516,7 @@ class UppaApp(ctk.CTk):
         dialog = ctk.CTkToplevel(self)
         dialog.title("Nova Tarefa")
         dialog.geometry("550x700")
-        dialog.configure(fg_color="#1a1f3a")
+        dialog.configure(fg_color="#1A1A1A")
         dialog.grab_set()
         
         # Título
@@ -1712,7 +1712,7 @@ class UppaApp(ctk.CTk):
         dialog = ctk.CTkToplevel(self)
         dialog.title("Editar Tarefa")
         dialog.geometry("550x700")
-        dialog.configure(fg_color="#1a1f3a")
+        dialog.configure(fg_color="#1A1A1A")
         dialog.grab_set()
         
         # Título
@@ -1978,7 +1978,7 @@ class UppaApp(ctk.CTk):
             x = self.winfo_x() + self.winfo_width() // 2 - 125
             y = self.winfo_y() + self.winfo_height() // 2 - 40
             popup.geometry(f"+{x}+{y}")
-            popup.configure(fg_color="#1a1f3a")
+            popup.configure(fg_color="#1A1A1A")
             lbl = ctk.CTkLabel(
                 popup,
                 text=f"Bônus: +{bonus} XP por antecedência!",
@@ -2016,7 +2016,7 @@ class UppaApp(ctk.CTk):
             popup.geometry(f"+{x}+{y}")
             
             # Cor de fundo
-            popup.configure(fg_color="#1a1f3a")
+            popup.configure(fg_color="#1A1A1A")
             
             # Label com XP/Mana
             lbl = ctk.CTkLabel(
@@ -2213,7 +2213,7 @@ class UppaApp(ctk.CTk):
         
         # Cores do brilho: Normal -> Brilhante -> Normal
         cor_normal = "#c77dff"  # Roxo neon
-        cor_brilho = "#ffd60a"  # Dourado mágico
+        cor_brilho = "#FFC857"  # Dourado mágico
         
         def pulso_1():
             try:
@@ -2264,10 +2264,10 @@ class UppaApp(ctk.CTk):
             for i, btn in enumerate(self.preset_buttons):
                 if i == idx:
                     # Selecionado: Roxo Neon + Borda
-                    btn.configure(fg_color="#b44fff", border_color="#e0aaff", border_width=2)
+                    btn.configure(fg_color="#8A2BE2", border_color="#6A1B9A", border_width=2)
                 else:
                     # Deselecionado: Roxo Escuro + Sem borda (cor da borda igual ao fg para evitar erro)
-                    btn.configure(fg_color="#3c096c", border_color="#3c096c", border_width=0)
+                    btn.configure(fg_color="#261635", border_color="#261635", border_width=0)
 
     def resetar_timer(self):
         """Reseta o timer para o início do preset atual"""
@@ -2276,7 +2276,7 @@ class UppaApp(ctk.CTk):
         try:
             self.timer_canvas.itemconfig(self.label_timer, text=f"{foco:02d}:00")
             self.timer_canvas.itemconfig(self.progress_arc, extent=-360)
-            self.label_status_pomodoro.configure(text="🎯 Foco", fg_color="#5a189a", text_color="#ffffff")
+            self.label_status_pomodoro.configure(text="🎯 Foco", fg_color="#8A2BE2", text_color="#ffffff")
         except:
             pass
     
@@ -2350,7 +2350,7 @@ class UppaApp(ctk.CTk):
         # Atualizar indicador de status
         try:
             if tipo_pausa == "Curta":
-                self.label_status_pomodoro.configure(text="☕ Pausa Curta", fg_color="#ffd43b", text_color="#1a0436")
+                self.label_status_pomodoro.configure(text="☕ Pausa Curta", fg_color="#ffd43b", text_color="#121212")
             else:
                 self.label_status_pomodoro.configure(text="🛌 Pausa Longa", fg_color="#ff6b6b", text_color="#ffffff")
         except:
@@ -2411,7 +2411,7 @@ class UppaApp(ctk.CTk):
         
         # Resetar indicador de status para Foco
         try:
-            self.label_status_pomodoro.configure(text="🎯 Foco", fg_color="#5a189a", text_color="#ffffff")
+            self.label_status_pomodoro.configure(text="🎯 Foco", fg_color="#8A2BE2", text_color="#ffffff")
         except:
             pass
         
@@ -2457,7 +2457,7 @@ class UppaApp(ctk.CTk):
             
             # Renderizar Pendente (XP)
             if has_pending_xp:
-                f = ctk.CTkFrame(container, fg_color="#2a0a33", corner_radius=10, border_width=1, border_color="#e0aaff")
+                f = ctk.CTkFrame(container, fg_color="#121212", corner_radius=10, border_width=1, border_color="#6A1B9A")
                 f.pack(side="left", padx=4)
                 ctk.CTkLabel(f, text="⚗️ XP (Próx)", font=("Roboto", 10), text_color="#d8b4fe").pack(padx=6, pady=2)
             
