@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Build & Distribution
+dist/
+build/
+Output/
+*.spec
+!uppa.spec
+
+# Installer & Executables
+*.exe
+{userdesktop}/
+
+# Logs & Database
+*.log
+uppa_data.db
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
