@@ -25,7 +25,7 @@ jobs:
 
     - name: Build with PyInstaller
       run: |
-        pyinstaller --noconfirm --onefile --windowed --add-data "src/assets;assets/" src/main.py --name "Uppa" --icon "src/assets/images/placeholder_lontra_lvl1.png"
+        pyinstaller --noconfirm --onefile --windowed --add-data "src/assets;assets" src/main.py --name "Uppa" --icon "src/assets/icon.ico"
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
