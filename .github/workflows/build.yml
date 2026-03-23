@@ -25,19 +25,16 @@ jobs:
 
     - name: Build with PyInstaller
       run: |
-        pyinstaller --noconfirm --onedir --windowed --add-data "src/assets;assets/" src/main.py --name "Uppa"
+        pyinstaller --noconfirm --onefile --windowed --add-data "src/assets;assets/" src/main.py --name "Uppa" --icon "src/assets/images/placeholder_lontra_lvl1.png"
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: Uppa-Windows
-        path: dist/Uppa
-
-    - name: Zip Release
-      run: Compress-Archive -Path dist/Uppa -DestinationPath Uppa-Windows.zip
+        path: dist/Uppa.exe
 
     - name: Release to GitHub
       uses: softprops/action-gh-release@v2
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: Uppa-Windows.zip
+        files: dist/Uppa.exe
