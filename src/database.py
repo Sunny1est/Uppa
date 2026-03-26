@@ -1,5 +1,4 @@
 import sqlite3
-import os
 import logging
 from typing import List, Tuple
 from datetime import datetime

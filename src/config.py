@@ -4,6 +4,7 @@ Todas as constantes e configurações do aplicativo em um único lugar.
 """
 
 import os
+import re
 import logging
 from pathlib import Path
 
@@ -234,8 +235,6 @@ def get_logger(name: str = "uppa"):
     """Retorna um logger com o nome especificado."""
     return logging.getLogger(name)
 
-
-import re
 
 def sanitize_input(text: str) -> str:
     """Limpa caracteres perigosos de texto livre (Defensive Coding)"""
